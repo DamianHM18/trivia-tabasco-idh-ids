@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Los Números de Nuestra Cultura – Edición Tabasco</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--selva:#0f7a4f;--selva-d:#064e3b;--cacao:#4a2c1a;--cacao-l:#7a4a2e;--oro:#f4c430;--agua:#2ec4b6;--crema:#fff8e7;--ok:#16a34a;--bad:#dc2626}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;color:#1f2a1f;background:linear-gradient(160deg,#064e3b 0%,#0f7a4f 40%,#2ec4b6 100%) fixed;min-height:100vh;overflow-x:hidden;line-height:1.6}
+.floaters{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.floaters span{position:absolute;bottom:-60px;font-size:2rem;opacity:.35;animation:subir linear infinite}
+@keyframes subir{to{transform:translateY(-115vh) rotate(360deg)}}
+nav{position:sticky;top:0;z-index:20;display:flex;gap:.4rem;justify-content:center;flex-wrap:wrap;padding:.6rem;background:rgba(6,78,59,.55);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.2)}
+nav a{color:#fff;text-decoration:none;font-weight:600;font-size:.85rem;padding:.4rem .9rem;border-radius:99px;transition:.25s}
+nav a:hover{background:var(--oro);color:var(--cacao);transform:translateY(-2px)}
+#sonido{border:0;background:rgba(255,255,255,.2);color:#fff;border-radius:99px;padding:.4rem .8rem;cursor:pointer;font-family:inherit;font-weight:600;font-size:.85rem}
+section,header{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:2.5rem 1.1rem}
+.glass{background:rgba(255,255,255,.2);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.4);border-radius:28px;box-shadow:0 12px 40px rgba(0,0,0,.2);padding:1.8rem}
+.card{background:rgba(255,248,231,.94);border-radius:24px;box-shadow:0 10px 30px rgba(74,44,26,.25);padding:1.6rem}
+.hero{text-align:center;color:#fff;padding-top:3rem}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;line-height:1.1;text-shadow:0 4px 16px rgba(0,0,0,.35)}
+.hero h1 em{font-style:normal;color:var(--oro)}
+.hero p.sub{margin:1rem auto 1.5rem;max-width:680px;font-size:1.05rem}
+.tabs{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.tab{border:2px solid rgba(255,255,255,.7);background:transparent;color:#fff;border-radius:99px;padding:.5rem 1.3rem;font:600 .95rem 'Poppins';cursor:pointer;transition:.25s}
+.tab:hover{transform:scale(1.06)}
+.tab.on{background:var(--oro);color:var(--cacao);border-color:var(--oro)}
+.explica{background:rgba(255,255,255,.92);color:var(--cacao);border-radius:20px;padding:1.2rem 1.4rem;text-align:left;max-width:720px;margin:0 auto;animation:pop .4s}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+h2{color:#fff;font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:.3rem;text-shadow:0 2px 10px rgba(0,0,0,.3)}
+.lead{color:#eafff6;margin-bottom:1.2rem}
+.bar{height:14px;background:rgba(74,44,26,.15);border-radius:99px;overflow:hidden;margin-bottom:1rem}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--oro),var(--selva));border-radius:99px;transition:width .6s}
+.meta{display:flex;justify-content:space-between;font-weight:600;color:var(--cacao-l);font-size:.9rem;margin-bottom:.5rem}
+.q{font-size:1.15rem;font-weight:700;color:var(--cacao);margin-bottom:1rem}
+.opt{display:block;width:100%;text-align:left;border:2px solid #e5d6b8;background:#fff;border-radius:16px;padding:.8rem 1rem;margin-bottom:.6rem;font:500 .98rem 'Poppins';color:#3a2a1e;cursor:pointer;transition:.2s}
+.opt:hover:not(:disabled){transform:translateX(6px);border-color:var(--selva);background:#f0fff8}
+.opt.ok{background:#dcfce7;border-color:var(--ok);color:#14532d;animation:pop .35s}
+.opt.bad{background:#fee2e2;border-color:var(--bad);color:#7f1d1d;animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.fb{margin-top:.6rem;padding:.9rem 1rem;border-radius:14px;background:#fff3c4;color:var(--cacao);font-size:.93rem;animation:pop .3s}
+.btn{border:0;background:linear-gradient(135deg,var(--selva),var(--selva-d));color:#fff;font:700 1rem 'Poppins';padding:.8rem 1.6rem;border-radius:99px;cursor:pointer;box-shadow:0 6px 16px rgba(6,78,59,.4);transition:.25s;margin-top:.8rem}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 10px 22px rgba(6,78,59,.5)}
+.btn.oro{background:linear-gradient(135deg,var(--oro),#e0a800);color:var(--cacao)}
+.final{text-align:center}
+.final .big{font-size:3.2rem}
+.final h3{color:var(--cacao);font-size:1.5rem}
+.sim{display:grid;grid-template-columns:1fr 220px;gap:1.5rem}
+@media(max-width:700px){.sim{grid-template-columns:1fr}}
+.sl label{display:flex;justify-content:space-between;font-weight:700;color:var(--cacao);margin-top:.9rem}
+input[type=range]{width:100%;height:10px;border-radius:99px;appearance:none;-webkit-appearance:none;background:linear-gradient(90deg,#fca5a5,#fde68a,#86efac);outline:none;margin:.5rem 0}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:var(--cacao);border:4px solid var(--oro);cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--cacao);border:4px solid var(--oro);cursor:pointer}
+.right{display:flex;flex-direction:column;align-items:center;gap:1rem}
+.semaforo{background:#2b2b2b;border-radius:40px;padding:12px;display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 0 12px #000,0 6px 16px rgba(0,0,0,.4)}
+.luz{width:58px;height:58px;border-radius:50%;opacity:.18;transition:.4s}
+.luz.r{background:#ef4444}.luz.a{background:#facc15}.luz.v{background:#22c55e}
+.luz.on{opacity:1;box-shadow:0 0 28px 6px currentColor;animation:late 1.4s infinite}
+.luz.r.on{color:#ef4444}.luz.a.on{color:#facc15}.luz.v.on{color:#22c55e}
+@keyframes late{50%{transform:scale(1.08)}}
+.termo{width:100%;text-align:center}
+.tubo{height:16px;background:#e7dcc4;border-radius:99px;overflow:hidden;margin:.4rem 0}
+.tubo i{display:block;height:100%;width:0;border-radius:99px;transition:width .4s,background .4s}
+.idh-num{font-size:2.4rem;font-weight:800;color:var(--cacao);line-height:1}
+.nivel{font-weight:700;margin-top:.2rem}
+.presets{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+.presets .btn{padding:.5rem 1rem;font-size:.85rem;margin:0}
+.nota{font-size:.8rem;color:var(--cacao-l);margin-top:1rem}
+.lectura{margin-top:1rem;padding:.9rem 1rem;border-radius:14px;background:#e8fff3;color:#064e3b;font-size:.93rem}
+.refl-q{font-size:1.3rem;font-weight:700;color:var(--cacao);text-align:center;margin-bottom:1rem}
+.acordeon{max-height:0;overflow:hidden;transition:max-height .8s ease}
+.acordeon.open{max-height:2400px}
+.acordeon h4{color:var(--selva-d);margin:1rem 0 .3rem}
+.acordeon p,.acordeon li{color:#3a2a1e;font-size:.95rem}
+.acordeon ul{padding-left:1.2rem}
+.dato{display:flex;gap:.7rem;flex-wrap:wrap;margin:.8rem 0}
+.dato div{flex:1;min-width:130px;background:#fff;border-radius:16px;padding:.8rem;text-align:center;border:2px solid var(--oro)}
+.dato b{display:block;font-size:1.5rem;color:var(--selva-d)}
+footer{position:relative;z-index:1;text-align:center;color:#eafff6;padding:2rem 1rem;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="floaters" id="floaters"></div>
+
+<nav>
+  <a href="#inicio">🏠 Inicio</a><a href="#trivia">🍫 Choco-Sabio</a><a href="#termometro">🌡️ Termómetro</a><a href="#reflexion">💭 Reflexión</a>
+  <button id="sonido" aria-label="Activar o desactivar sonido">🔊 Sonido: ON</button>
+</nav>
+
+<header class="hero" id="inicio">
+  <h1>Los Números de Nuestra Cultura 📊<br><em>Edición Tabasco</em></h1>
+  <p class="sub">Tabasco es cacao, selva, río y sabor… pero ¿qué dicen los números sobre la vida de su gente? Toca una pestaña y descúbrelo.</p>
+  <div class="tabs">
+    <button class="tab on" data-t="idh">🌎 ¿Qué es el IDH?</button>
+    <button class="tab" data-t="ids">🏘️ ¿Qué es el IDS?</button>
+    <button class="tab" data-t="vs">⚖️ IDH vs. IDS</button>
+  </div>
+  <div class="explica" id="explica"></div>
+</header>
+
+<section id="trivia">
+  <h2>🍫 Choco-Sabio: la trivia</h2>
+  <p class="lead">Responde 5 preguntas y demuestra cuánto sabes de desarrollo.</p>
+  <div class="card" id="quizBox"></div>
+</section>
+
+<section id="termometro">
+  <h2>🌡️ Termómetro del Desarrollo</h2>
+  <p class="lead">Mueve los tres pilares del IDH y mira cómo reacciona el semáforo.</p>
+  <div class="card">
+    <div class="sim">
+      <div class="sl">
+        <label><span>❤️ Salud (esperanza de vida)</span><span id="vS">82</span></label>
+        <input type="range" id="sS" min="0" max="100" value="82">
+        <label><span>📚 Educación (años de estudio)</span><span id="vE">66</span></label>
+        <input type="range" id="sE" min="0" max="100" value="66">
+        <label><span>💰 Nivel de vida (ingreso)</span><span id="vN">78</span></label>
+        <input type="range" id="sN" min="0" max="100" value="78">
+        <div class="presets">
+          <button class="btn oro" data-p="82,66,78">📍 Tabasco (aprox. 2020)</button>
+          <button class="btn" data-p="95,92,90">🚀 Meta ideal</button>
+          <button class="btn" data-p="45,35,30">⚠️ Crisis</button>
+        </div>
+        <div class="lectura" id="lectura"></div>
+        <p class="nota">* Cada pilar va de 0 a 100 (equivale a 0.00–1.00). El IDH se calcula como la media geométrica de los tres índices. Los valores de “Tabasco” son una aproximación didáctica; el IDH estatal 2020 del PNUD es 0.748.</p>
+      </div>
+      <div class="right">
+        <div class="semaforo"><div class="luz v" id="lv"></div><div class="luz a" id="la"></div><div class="luz r" id="lr"></div></div>
+        <div class="termo">
+          <div class="idh-num" id="idhN">0.000</div>
+          <div class="tubo"><i id="tubo"></i></div>
+          <div class="nivel" id="nivel"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reflexion">
+  <h2>💭 Reflexión final</h2>
+  <div class="card">
+    <p class="refl-q">¿La riqueza cultural de Tabasco se refleja en su desarrollo humano y social? ¿Sí o no? ¿Por qué?</p>
+    <div style="text-align:center"><button class="btn oro" id="btnRef">🔎 Descubrir el análisis</button></div>
+    <div class="acordeon" id="ref">
+      <h4>🟡 Respuesta corta: parcialmente</h4>
+      <p>La cultura tabasqueña es enorme: cacao, gastronomía, la herencia olmeca y maya chontal, el Grijalva y el Usumacinta, la biodiversidad de los Pantanos de Centla. Sin embargo, esa riqueza no se convierte de forma automática en bienestar para todas las personas.</p>
+      <div class="dato">
+        <div><b>0.748</b>IDH estatal 2020 (PNUD)</div>
+        <div><b>Alto</b>categoría (0.700–0.799)</div>
+        <div><b>22 / 32</b>lugar nacional</div>
+      </div>
+      <h4>📊 Lo que dicen los números</h4>
+      <ul>
+        <li>El IDH de Tabasco está en la categoría “alto”, pero en la mitad baja del ranking nacional (lugar 22 de 32 según PNUD).</li>
+        <li>El IDS (medición de carencias sociales y pobreza, como la que realiza CONEVAL) ha mostrado a Tabasco con rezagos en seguridad social, servicios de salud y calidad de vivienda, y con niveles de pobreza por encima del promedio nacional en las mediciones recientes.</li>
+        <li>El IDH es un promedio: oculta diferencias entre Centro y municipios rurales o indígenas como Tacotalpa, Tenosique o Jonuta.</li>
+      </ul>
+      <h4>🌴 El contraste</h4>
+      <p>Tabasco aporta petróleo, gas, agua, agricultura y cultura al país, pero buena parte de la riqueza extraída no se queda en los hogares. Es una paradoja conocida: abundancia de recursos, bienestar desigual. Además, el clima, las inundaciones y la dependencia de la economía petrolera golpean directamente ingresos, vivienda y salud.</p>
+      <h4>🧭 Conclusión crítica</h4>
+      <p>La identidad cultural es un capital enorme, pero la cultura no se mide en el IDH y el IDH tampoco mide la cultura. Para que la riqueza cultural se refleje en desarrollo hacen falta: educación de calidad (el pilar más débil), empleo formal, salud accesible, infraestructura contra inundaciones y que las comunidades que sostienen las tradiciones también compartan los beneficios. Orgullo sí; conformismo, no.</p>
+      <p style="margin-top:.8rem;font-size:.8rem;color:#7a4a2e">Fuente de referencia: PNUD México, IDH estatal 2020 (publicado en 2022). Para cifras de pobreza actualizadas consulta CONEVAL e INEGI.</p>
+    </div>
+  </div>
+</section>
+
+<footer>🌿 Hecho con orgullo tabasqueño · Datos: PNUD, CONEVAL, INEGI 🍌</footer>
+
+<script>
+/* ---------- Sonido suave ---------- */
+let sonidoOn=true,ac=null;
+function tono(f,d=.15,tipo='sine',v=.08,t0=0){
+  if(!sonidoOn)return;
+  try{
+    ac=ac||new (window.AudioContext||window.webkitAudioContext)();
+    const o=ac.createOscillator(),g=ac.createGain();
+    o.type=tipo;o.frequency.value=f;
+    const t=ac.currentTime+t0;
+    g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.001,t+d);
+    o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+d);
+  }catch(e){}
+}
+const sOk=()=>{tono(523,.14);tono(659,.14,'sine',.08,.12);tono(784,.25,'sine',.08,.24)};
+const sMal=()=>{tono(220,.25,'triangle',.09);tono(165,.3,'triangle',.09,.18)};
+const sClick=()=>tono(440,.08,'sine',.05);
+document.getElementById('sonido').onclick=e=>{sonidoOn=!sonidoOn;e.target.textContent=sonidoOn?'🔊 Sonido: ON':'🔇 Sonido: OFF';sClick()};
+
+/* ---------- Elementos flotantes ---------- */
+const fl=document.getElementById('floaters'),emo=['🌿','🍫','🐊','🐆','🍌','🌴','🐟'];
+for(let i=0;i<22;i++){
+  const s=document.createElement('span');
+  s.textContent=emo[i%emo.length];
+  s.style.left=Math.random()*100+'%';
+  s.style.fontSize=(1.4+Math.random()*2)+'rem';
+  s.style.animationDuration=(14+Math.random()*18)+'s';
+  s.style.animationDelay=(-Math.random()*25)+'s';
+  fl.appendChild(s);
+}
+
+/* ---------- Pestañas de bienvenida ---------- */
+const textos={
+ idh:'<b>🌎 Índice de Desarrollo Humano (IDH)</b><br>Lo calcula el PNUD y resume tres cosas: <b>salud</b> (cuánto vivimos), <b>educación</b> (cuántos años estudiamos) y <b>nivel de vida</b> (ingreso). Va de 0 a 1: más cerca de 1, mayor desarrollo. Tabasco obtuvo <b>0.748</b> en 2020: categoría <b>alta</b>.',
+ ids:'<b>🏘️ Índice de Desarrollo Social (IDS)</b><br>Mira las condiciones concretas de los hogares: acceso a salud, seguridad social, educación, calidad y espacios de la vivienda, servicios básicos y alimentación. En México se apoya en la medición de pobreza y carencias sociales (CONEVAL).',
+ vs:'<b>⚖️ ¿En qué se diferencian?</b><br>El <b>IDH</b> es un promedio amplio y comparable entre países y estados. El <b>IDS</b> mira las carencias de las personas y de los hogares. Un estado puede tener un IDH “alto” y aun así tener muchas carencias sociales: por eso conviene leer ambos.'
+};
+const ex=document.getElementById('explica');
+function verTab(k){ex.innerHTML=textos[k];ex.style.animation='none';ex.offsetWidth;ex.style.animation=''}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');verTab(b.dataset.t);sClick();
+});
+verTab('idh');
+
+/* ---------- Trivia ---------- */
+const Q=[
+ {q:'¿Cuáles son las tres dimensiones del IDH?',o:['Salud, educación y nivel de vida','Petróleo, turismo y agricultura','Seguridad, empleo y vivienda','Cultura, deporte y comercio'],c:0,e:'El IDH combina esperanza de vida (salud), años de escolaridad (educación) e ingreso per cápita (nivel de vida).'},
+ {q:'¿Quién calcula el Índice de Desarrollo Humano (IDH) estatal en México?',o:['La FIFA','El PNUD (ONU)','La Secretaría de Turismo','El Banco de Alimentos'],c:1,e:'El Programa de las Naciones Unidas para el Desarrollo (PNUD) publica el IDH y sus informes para México y sus estados.'},
+ {q:'¿Qué mide principalmente el IDS (Desarrollo Social)?',o:['Cuántos turistas visitan el estado','Las carencias y condiciones sociales de los hogares: salud, vivienda, servicios, alimentación','Solo el precio del petróleo','La cantidad de ríos'],c:1,e:'El IDS se enfoca en el acceso real a derechos y servicios sociales, por eso complementa al IDH.'},
+ {q:'Según el PNUD (2020), el IDH de Tabasco es 0.748. ¿En qué categoría está?',o:['Muy alto','Alto','Medio','Bajo'],c:1,e:'0.700 a 0.799 es “alto”. Tabasco quedó en esa categoría, aunque en el lugar 22 entre las 32 entidades.'},
+ {q:'¿Cuál es la principal diferencia entre IDH e IDS?',o:['No hay diferencia, son lo mismo','El IDH es un promedio general de bienestar; el IDS se fija en carencias sociales concretas','El IDS solo se usa en Europa','El IDH mide la cultura y el IDS el clima'],c:1,e:'El IDH sintetiza el avance general; el IDS detalla qué derechos o servicios faltan en los hogares.'},
+ {q:'Tabasco es potencia cultural y de recursos. ¿Qué muestra la “paradoja” del desarrollo en el estado?',o:['Que más riqueza natural garantiza siempre más bienestar','Que riqueza cultural y de recursos no siempre se traduce en bienestar para toda la población','Que el IDH no sirve para nada','Que la cultura se puede medir con un termómetro'],c:1,e:'Un estado puede aportar mucho al país (energía, agua, cacao, cultura) y aun así tener desigualdad y rezagos sociales.'}
+];
+let qi=0,pts=0,resp=false;
+const box=document.getElementById('quizBox');
+function pinta(){
+  resp=false;
+  if(qi>=Q.length)return fin();
+  const p=Q[qi];
+  box.innerHTML=`<div class="meta"><span>Pregunta ${qi+1} de ${Q.length}</span><span>⭐ ${pts} pts</span></div>
+  <div class="bar"><i style="width:${qi/Q.length*100}%"></i></div>
+  <div class="q">${p.q}</div>
+  ${p.o.map((t,i)=>`<button class="opt" data-i="${i}">${String.fromCharCode(65+i)}) ${t}</button>`).join('')}
+  <div id="fb"></div>`;
+  requestAnimationFrame(()=>box.querySelector('.bar i').style.width=(qi/Q.length*100)+'%');
+  box.querySelectorAll('.opt').forEach(b=>b.onclick=()=>responde(+b.dataset.i));
+}
+function responde(i){
+  if(resp)return;resp=true;
+  const p=Q[qi],bs=box.querySelectorAll('.opt');
+  bs.forEach(b=>b.disabled=true);
+  bs[p.c].classList.add('ok');
+  const bien=i===p.c;
+  if(bien){pts++;sOk()}else{bs[i].classList.add('bad');sMal()}
+  document.getElementById('fb').innerHTML=`<div class="fb">${bien?'✅ ¡Correcto!':'❌ Casi…'} ${p.e}</div><button class="btn" id="sig">${qi===Q.length-1?'Ver resultado 🏆':'Siguiente ➜'}</button>`;
+  document.getElementById('sig').onclick=()=>{sClick();qi++;pinta()};
+}
+function fin(){
+  const pc=pts/Q.length;
+  let em,t,m;
+  if(pc>=.8){em='🏆🍫';t='¡Eres un verdadero Choco Experto en Desarrollo!';m='Dominas el IDH, el IDS y el contexto de Tabasco. ¡Con ese conocimiento se puede transformar el estado!'}
+  else if(pc>=.5){em='🌿👏';t='¡Vas muy bien, casi Choco Experto!';m='Tienes buena base. Repasa las diferencias entre IDH e IDS y vuelve a intentarlo.'}
+  else{em='🥣🍌';t='¡Te falta un poquitito de pozol para repasar!';m='No pasa nada: revisa la sección de bienvenida y el termómetro y regresa por la revancha.'}
+  box.innerHTML=`<div class="final"><div class="big">${em}</div><h3>${t}</h3>
+  <p style="margin:.6rem 0">Obtuviste <b>${pts} de ${Q.length}</b> (${Math.round(pc*100)}%)</p>
+  <div class="bar"><i style="width:0"></i></div><p>${m}</p>
+  <button class="btn oro" id="rep">🔄 Jugar otra vez</button></div>`;
+  requestAnimationFrame(()=>box.querySelector('.bar i').style.width=pc*100+'%');
+  document.getElementById('rep').onclick=()=>{qi=0;pts=0;sClick();pinta()};
+  pc>=.5?sOk():sMal();
+}
+pinta();
+
+/* ---------- Termómetro IDH ---------- */
+const sS=document.getElementById('sS'),sE=document.getElementById('sE'),sN=document.getElementById('sN');
+function calc(){
+  const s=+sS.value/100,e=+sE.value/100,n=+sN.value/100;
+  document.getElementById('vS').textContent=sS.value;
+  document.getElementById('vE').textContent=sE.value;
+  document.getElementById('vN').textContent=sN.value;
+  const idh=Math.cbrt(s*e*n);
+  document.getElementById('idhN').textContent=idh.toFixed(3);
+  const tubo=document.getElementById('tubo');
+  tubo.style.width=(idh*100)+'%';
+  let nivel,col,luz,txt;
+  if(idh>=.7){luz='lv';col='#22c55e';nivel=idh>=.8?'🟢 Muy alto':'🟢 Alto'}
+  else if(idh>=.55){luz='la';col='#facc15';nivel='🟡 Medio'}
+  else{luz='lr';col='#ef4444';nivel='🔴 Bajo'}
+  tubo.style.background=col;
+  document.getElementById('nivel').textContent=nivel;
+  ['lv','la','lr'].forEach(id=>document.getElementById(id).classList.toggle('on',id===luz));
+  const v=[['Salud',s],['Educación',e],['Nivel de vida',n]].sort((a,b)=>a[1]-b[1]);
+  txt=`El pilar más débil es <b>${v[0][0]}</b> (${v[0][1].toFixed(2)}) y el más fuerte es <b>${v[2][0]}</b> (${v[2][1].toFixed(2)}). `;
+  txt+= idh>=.7?'Un desarrollo alto requiere sostener los tres pilares a la vez.':idh>=.55?'Para pasar a “alto” (0.700) sube sobre todo el pilar más débil.':'Zona de alerta: se necesitan inversiones urgentes en los tres pilares.';
+  document.getElementById('lectura').innerHTML=txt;
+}
+[sS,sE,sN].forEach(r=>r.oninput=()=>{calc();tono(300+(+r.value)*4,.06,'sine',.04)});
+document.querySelectorAll('.presets .btn').forEach(b=>b.onclick=()=>{
+  const [a,c,d]=b.dataset.p.split(',');sS.value=a;sE.value=c;sN.value=d;calc();sClick();
+});
+calc();
+
+/* ---------- Reflexión ---------- */
+const ref=document.getElementById('ref'),bR=document.getElementById('btnRef');
+bR.onclick=()=>{
+  const a=ref.classList.toggle('open');
+  bR.textContent=a?'🔼 Ocultar análisis':'🔎 Descubrir el análisis';
+  a?sOk():sClick();
+};
+</script>
+</body>
+</html>
